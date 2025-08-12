@@ -1,0 +1,15 @@
+<div class="form-container">
+  <div class="form-box">
+    <h2>Login</h2>
+
+    <input type="text" placeholder="Username" [(ngModel)]="loginData.username" />
+
+    <input [type]="showPassword ? 'text' : 'password'" placeholder="Password" [(ngModel)]="loginData.password" />
+
+    <div class="show-password-toggle" (click)="showPassword = !showPassword">
+      <span>{{ showPassword ? '🙈 Hide Password' : '👁️ Show Password' }}</span>
+    </div>
+
+    <button (click)="onLogin()">Login</button>
+  </div>
+</div>

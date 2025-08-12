@@ -1,0 +1,82 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('/assets/images/view-profile-bck.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.update-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #00e6e6;
+  text-shadow: 1px 1px 10px #000;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #00e6e6;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #00cccc;
+}
+
+.success-msg {
+  color: #00ff99;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 20px;
+}

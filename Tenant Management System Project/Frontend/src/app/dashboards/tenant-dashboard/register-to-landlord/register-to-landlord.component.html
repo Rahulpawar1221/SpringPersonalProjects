@@ -1,0 +1,85 @@
+<div class="register-bg">
+  <div class="register-container">
+    <h2>Tenant Registration under Landlord</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <!-- Tenant Full Name -->
+      <div class="form-row">
+        <label>Full Name:</label>
+        <input formControlName="tenantFullName" placeholder="Enter full name" />
+        <div *ngIf="registerForm.get('tenantFullName')?.touched && registerForm.get('tenantFullName')?.invalid" class="error">
+          Full name is required.
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-row">
+        <label>Email:</label>
+        <input formControlName="tenantEmail" type="email" placeholder="Enter email" />
+        <div *ngIf="registerForm.get('tenantEmail')?.touched && registerForm.get('tenantEmail')?.invalid" class="error">
+          Enter a valid email.
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-row">
+        <label>Phone Number:</label>
+        <input formControlName="tenantPhoneNumber" placeholder="Enter phone number" />
+        <div *ngIf="registerForm.get('tenantPhoneNumber')?.touched && registerForm.get('tenantPhoneNumber')?.invalid" class="error">
+          Enter a valid 10-digit phone number.
+        </div>
+      </div>
+
+      <!-- Permanent Address -->
+      <div class="form-row">
+        <label>Permanent Address:</label>
+        <textarea formControlName="tenantPermanentAddress" placeholder="Enter address"></textarea>
+        <div *ngIf="registerForm.get('tenantPermanentAddress')?.touched && registerForm.get('tenantPermanentAddress')?.invalid" class="error">
+          Address is required.
+        </div>
+      </div>
+
+      <!-- Aadhaar Number -->
+      <div class="form-row">
+        <label>Aadhaar Number:</label>
+        <input formControlName="aadhaarNumber" placeholder="Enter 12-digit Aadhaar" />
+        <div *ngIf="registerForm.get('aadhaarNumber')?.touched && registerForm.get('aadhaarNumber')?.invalid" class="error">
+          Enter a valid 12-digit Aadhaar number.
+        </div>
+      </div>
+
+      <!-- PAN Card Number -->
+      <div class="form-row">
+        <label>PAN Card Number:</label>
+        <input formControlName="panCardNumber" placeholder="Enter PAN number" />
+        <div *ngIf="registerForm.get('panCardNumber')?.touched && registerForm.get('panCardNumber')?.invalid" class="error">
+          Enter a valid PAN (e.g., ABCDE1234F).
+        </div>
+      </div>
+
+      <!-- Landlord Code -->
+      <div class="form-row">
+        <label>Landlord Code:</label>
+        <input formControlName="landlordCode" placeholder="Enter landlord code" />
+        <div *ngIf="registerForm.get('landlordCode')?.touched && registerForm.get('landlordCode')?.invalid" class="error">
+          Landlord code is required.
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="registerForm.invalid || isSubmitting">
+        {{ isSubmitting ? 'Registering...' : 'Register' }}
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div *ngIf="message" class="message success">
+      {{ message }}
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="message error">
+      {{ error }}
+    </div>
+  </div>
+</div>

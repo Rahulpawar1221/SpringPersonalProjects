@@ -1,0 +1,85 @@
+/* Page Background */
+.register-bg {
+  background: url('src/assets/images/register to landlord background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Form Container Styling */
+.register-container {
+  width: 35%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+}
+
+.form-row {
+  margin: 12px 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+}
+
+button:hover:not(:disabled) {
+  background-color: #007d85;
+}
+
+.message {
+  text-align: center;
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}

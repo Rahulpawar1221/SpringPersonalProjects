@@ -1,0 +1,26 @@
+<p>tenant-dashboard works!</p>
+<app-tenant-sidebar></app-tenant-sidebar>
+
+<div class="main-content">
+  <div class="logout-container">
+    <button class="logout-button" (click)="logout()">Log Out</button>
+  </div>
+
+  <h2>Welcome to Tenant Dashboard</h2>
+  <p class="subtitle">Please select a functionality</p>
+
+  <div class="card-container">
+    <div class="card" routerLink="/tenant-dashboard/register-to-landlord">
+      Register To Your Landlord
+    </div>
+    <div class="card" routerLink="/tenant-dashboard/view-tenant-profile">
+      View Profile
+    </div>
+    <div class="card" routerLink="/tenant-dashboard/update-tenant-profile">
+      Update Profile
+    </div>
+    <div class="card">Coming Soon</div>
+    <div class="card">Coming Soon</div>
+    <div class="card">Coming Soon</div>
+  </div>
+</div>

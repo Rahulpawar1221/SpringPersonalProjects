@@ -1,0 +1,23 @@
+
+<div class="profile-container" *ngIf="!loading">
+  <h2 class="heading">Tenant Profile</h2>
+
+  <div *ngIf="tenantProfile; else errorBlock" class="profile-card">
+    <p><strong>Full Name:</strong> {{ tenantProfile.tenantFullName }}</p>
+    <p><strong>Email:</strong> {{ tenantProfile.tenantEmail }}</p>
+    <p><strong>Phone:</strong> {{ tenantProfile.tenantPhoneNumber }}</p>
+    <p><strong>Permanent Address:</strong> {{ tenantProfile.tenantPermanentAddress }}</p>
+    <p><strong>Aadhaar Number:</strong> {{ tenantProfile.aadhaarNumber }}</p>
+    <p><strong>PAN Card Number:</strong> {{ tenantProfile.panCardNumber }}</p>
+    <p><strong>Tenant Code:</strong> {{ tenantProfile.tenantCode }}</p>
+    <p><strong>Landlord Code:</strong> {{ tenantProfile.landlordCode }}</p>
+    <p><strong>Landlord Phone:</strong> {{ tenantProfile.landlordPhoneNumber }}</p>
+    <p><strong>Lease Activated:</strong> {{ tenantProfile.leaseActivationStatus ? 'Yes' : 'No' }}</p>
+  </div>
+
+  <ng-template #errorBlock>
+    <p class="error-text">{{ errorMessage }}</p>
+  </ng-template>
+</div>
+
+<div *ngIf="loading" class="loading-text">Loading profile...</div>
